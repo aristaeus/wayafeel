@@ -1,0 +1,5 @@
+README
+    Wayafeel is a word creation program. It basically takes phonemes and joins them together to create new and unique words. The files in data/phoneme have lists of which phonemes go together to create pronounceable words, however this still needs some fine tuning. The files in data/grapheme have lists of possible graphemes for each phoneme, but this is still pretty useless.
+
+CHANGELOG
+    - Created the program. Basic construction of phonetic words, and an attempt at creating words from graphemes.
