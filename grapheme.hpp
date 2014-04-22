@@ -9,11 +9,11 @@
 namespace tk{
 
 	class grapheme {
-		static std::vector<std::vector<std::string>> graphemes;
-		static std::vector<std::string> phonemes;
+		static std::vector<std::vector<std::string>> graphemes;	// Contains graphemes for each phoneme.
+		static std::vector<std::string> phonemes;		// List of phonemes.
 	    public:
-		static void set_graphemes();
-		static std::string phoneme(tk::phoneme p, tk::random& rand);
+		static void set_graphemes();	// Populates vectors.
+		static std::string phoneme(tk::phoneme p, tk::random& rand);	// Selects a random grapheme for phoneme p.
 	};
 
 }

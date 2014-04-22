@@ -9,14 +9,14 @@ std::vector<std::vector<std::string>> tk::grapheme::graphemes;
 std::vector<std::string> tk::grapheme::phonemes;
 
 void tk::grapheme::set_graphemes(){
-	std::ifstream phoneme_file("./data/phonemes", std::ios::in);
+	std::ifstream phoneme_file("./data/phonemes", std::ios::in);	// Loads the list of phonemes.
 	if(!phoneme_file.is_open()) std::cout << "Phonemes not found.\n";
 
 	std::string line;
 
 	while(std::getline(phoneme_file, line)){
 		phonemes.push_back(line);
-		std::ifstream file("./data/grapheme/"+line, std::ios::in);
+		std::ifstream file("./data/grapheme/"+line, std::ios::in);	// For each phoneme, loads the list of graphemes.
 		if(!file.is_open()) std::cout << line << " not found.\n";
 
 		std::vector<std::string> vec;
@@ -31,7 +31,7 @@ void tk::grapheme::set_graphemes(){
 	phoneme_file.close();
 }
 
-std::string tk::grapheme::phoneme(tk::phoneme p, tk::random& rand){
+std::string tk::grapheme::phoneme(tk::phoneme p, tk::random& rand){		// Selects a random grapheme.
 	for(int i = 0; i < phonemes.size(); i++){
 		if(phonemes[i] == p.get()){
 			return graphemes[i][rand(0,graphemes[i].size()-1)];

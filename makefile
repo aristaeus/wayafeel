@@ -1,5 +1,5 @@
 all: main.o phoneme.o random.o grapheme.o
-	g++ -o phoneme main.o phoneme.o grapheme.o random.o -std=c++11 -g
+	g++ -o wayafeel main.o phoneme.o grapheme.o random.o -std=c++11 -g
 
 main.o: main.cpp
 	g++ -c main.cpp -std=c++11 -g
