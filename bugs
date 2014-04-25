@@ -1,0 +1,2 @@
+- Unexplained segfaults on certain seeds e.g. 888
+- Command line arguments don't support negative numbers.

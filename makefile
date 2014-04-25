@@ -1,4 +1,6 @@
-all: main.o phoneme.o random.o grapheme.o
+all: wayafeel
+
+wayafeel: main.o phoneme.o random.o grapheme.o
 	g++ -o wayafeel main.o phoneme.o grapheme.o random.o -std=c++11 -g
 
 main.o: main.cpp
@@ -13,5 +15,8 @@ grapheme.o: grapheme.cpp
 random.o: random.cpp
 	g++ -c random.cpp -std=c++11 -g
 
-clean:
+clean: del_wayafeel
 	rm *.o
+
+del_wayafeel:
+	rm wayafeel
