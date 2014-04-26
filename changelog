@@ -2,3 +2,4 @@
 - added a file called bugs that contains a list of bugs.
 - updated some input files
 - command line arguments now support negative numbers
+- fixed fencepost errors causing segfaults on certain seeds

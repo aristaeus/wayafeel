@@ -35,14 +35,14 @@ void tk::phoneme::set_phonemes(){
 	phoneme_file.close();
 }
 tk::phoneme tk::phoneme::get_phoneme(tk::random& rand){
-	return tk::phoneme(phonemes[rand(0,phonemes.size())]);		// Returns a random phoneme.
+	return tk::phoneme(phonemes[rand(0,phonemes.size()-1)]);		// Returns a random phoneme.
 }
 
 tk::phoneme tk::phoneme::get_phoneme(tk::random& rand, tk::phoneme p){	// Selects a random phoneme, then checks pronounceability. Returns if valid, loops if not.
 	//return tk::phoneme::get_phoneme(rand);
 	std::string var;
 	while(true){
-		var = phonemes[rand(0,phonemes.size())];
+		var = phonemes[rand(0,phonemes.size()-1)];
 		for(int i = 0; i < phonemes.size(); i++){
 			if(phonemes[i] == p.get()){
 				for(int j = 0; j < pronounce[i].size(); j++){
