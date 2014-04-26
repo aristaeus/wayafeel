@@ -1,3 +1,4 @@
+v 0.3.1
 - make clean now deletes the wayafeel executable file as well as *.o
 - added a file called bugs that contains a list of bugs.
 - updated some input files
