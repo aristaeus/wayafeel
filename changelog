@@ -1,3 +1,4 @@
-- make clean now deletes the executable as well as the *.o files
-- added a file called bugs that has a list of bugs in it
+- make clean now deletes the wayafeel executable file as well as *.o
+- added a file called bugs that contains a list of bugs.
 - updated some input files
+- command line arguments now support negative numbers

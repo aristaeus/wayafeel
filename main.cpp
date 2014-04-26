@@ -13,11 +13,18 @@ int main(int argc, char* argv []){
 		std::cout << "Enter seed (enter 0 for a random seed): ";
 		std::cin >> seed;
 		if (seed != 0) rand.set_seed(seed);		// Set the seed.
-	} else {		// If a seed was provided.
-		seed = *argv[1] - 48;
-		for(int i = 1; argv[1][i] != '\0'; i++){
-			seed *= 10;
-			seed += argv[1][i] - 48; 
+	} else { if(*argv[1] != '-'){			// If a positive seed was provided.
+			 seed = *argv[1] - 48;
+			for(int i = 1; argv[1][i] != '\0'; i++){
+				seed *= 10;
+				seed += argv[1][i] - 48; 
+			}
+		} else {		// If a negative seed was provided.
+			seed = -(argv[1][1] - 48);
+			for(int i = 2; argv[1][i] != '\0'; i++){
+				seed *= 10;
+				seed -= argv[1][i] - 48; 
+			}
 		}
 		rand.set_seed(seed);		// Set the seed.
 	}
