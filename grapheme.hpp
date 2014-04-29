@@ -3,7 +3,7 @@
 
 #include <string>
 #include <vector>
-#include "random.hpp"
+#include "random_wrapper/random.hpp"
 #include "phoneme.hpp"
 
 namespace tk{

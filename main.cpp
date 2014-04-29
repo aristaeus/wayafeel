@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "random.hpp"
+#include "random_wrapper/random.hpp"
 #include "phoneme.hpp"
 #include "grapheme.hpp"
 

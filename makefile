@@ -12,11 +12,11 @@ phoneme.o: phoneme.cpp
 grapheme.o: grapheme.cpp
 	g++ -c grapheme.cpp -std=c++11 -g
 
-random.o: random.cpp
-	g++ -c random.cpp -std=c++11 -g
+random.o: random_wrapper/random.cpp
+	g++ -c random_wrapper/random.cpp -std=c++11 -g
 
-clean: del_wayafeel
-	rm *.o
-
-del_wayafeel:
+clean: rm_o
 	rm wayafeel
+
+rm_o:
+	rm *.o
