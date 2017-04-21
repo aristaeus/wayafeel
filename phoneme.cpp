@@ -2,7 +2,7 @@
 #include <vector>
 #include <iostream>
 #include <fstream>
-#include "random_wrapper/random.hpp"
+#include "random.hpp"
 #include "phoneme.hpp"
 
 std::vector<std::string> tk::phoneme::phonemes;

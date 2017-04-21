@@ -3,7 +3,7 @@
 #include <vector>
 #include <iostream>
 #include "grapheme.hpp"
-#include "random_wrapper/random.hpp"
+#include "random.hpp"
 
 std::vector<std::vector<std::string>> tk::grapheme::graphemes;
 std::vector<std::string> tk::grapheme::phonemes;
